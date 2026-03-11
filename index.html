@@ -4,591 +4,833 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Voto, Tu Voz - Proyecto CivicAI 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <img src="imagenes/encabezado.png" alt="Tu Voto, Tu Voz">
-        <h1>Tu Voto, Tu Voz</h1>
-        <p class="subtitle">🎭 Proyecto ComunicracIA - ¡La democracia vota por vos! | Convocatoria 2026</p>
+        <div class="header-bg">
+            <img src="imagenes/principal.png" alt="Tu Voto, Tu Voz">
+        </div>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 class="header-title">Tu Voto, Tu Voz</h1>
+            <p class="header-subtitle">Proyecto ComunicracIA - 2026</p>
+        </div>
     </header>
 
     <!-- Navigation -->
     <nav class="nav-container">
-        <div class="nav">
-            <button class="nav-btn active" onclick="showTab('inicio')">🏠 Inicio</button>
-            <button class="nav-btn" onclick="showTab('candidatos')">🗳️ Candidatos</button>
-            <button class="nav-btn" onclick="showTab('ccdb')">🎭 Centro Don Bosco</button>
-            <button class="nav-btn" onclick="showTab('solidar')">🤝 SolidarSuiza</button>
-            <button class="nav-btn" onclick="showTab('equipo')">⭐ Nuestro Equipo</button>
+        <div class="nav-wrapper">
+            <div class="nav-links">
+                <button class="nav-link active" onclick="showTab('actividades')">
+                    <span>Actividades</span>
+                </button>
+                <button class="nav-link" onclick="showTab('tuvoto')">
+                    <span>Tu Voto, Tu Voz</span>
+                </button>
+                <button class="nav-link" onclick="showTab('candidatos')">
+                    <span>Candidatos</span>
+                </button>
+                <button class="nav-link" onclick="showTab('aliados')">
+                    <span>Aliados</span>
+                </button>
+                <button class="nav-link" onclick="showTab('equipo')">
+                    <span>Nuestro Equipo</span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- TAB 1: INICIO -->
-        <div id="inicio" class="tab-content active">
-            <h2 class="section-title">¿En qué consiste el proyecto?</h2>
-            
-            <div class="card">
-                <h3 style="text-align: center; color: #1a1a2e; margin-bottom: 30px; font-size: 2rem; font-weight: 700;">¡Participa en la democracia!</h3>
-                <p style="line-height: 1.9; color: #555; font-size: 1.1rem; text-align: center;">
-                    "Tu Voto, Tu Voz" es un proyecto de <strong style="color: #f39c12;">educación cívica</strong> que busca informar detalladamente sobre los candidatos a las elecciones subnacionales en el municipio de La Paz, mostrando sus planes de gobierno y principales propuestas. 
-                </p>
-                <p style="line-height: 1.9; color: #555; font-size: 1.1rem; text-align: center; margin-top: 20px;">
-                    El proyecto está gestionando visitas a <strong style="color: #f39c12;">Unidades Educativas</strong>, cada una con una población de más de 600 estudiantes, donde los jóvenes de 6to de secundaria votarán por primera vez, con el fin de brindando información necesaria para que cumplan con el deber ciudadano de forma informada.
-                </p>
+        
+        <!-- TAB 1: ACTIVIDADES -->
+        <div id="actividades" class="tab-content active">
+            <div class="content-wrapper">
+                <h2 class="page-title">Nuestras Actividades</h2>
                 
-                <!-- Imagen decorativa usando biblioteca -->
-                <div class="decorative-image">
-                    <img src="imagenes/bibliotecaccdb.jpeg" alt="Estudiantes participando">
+                <!-- Simulación de votación -->
+                <div class="activity-section">
+                    <div class="activity-card">
+                        <div class="activity-image">
+                            <img src="imagenes/simulacion.jpg" alt="Simulación de votación">
+                        </div>
+                        <div class="activity-info">
+                            <h3>Simulación de votación</h3>
+                            <p>La simulación de votación es una actividad educativa que permite a las personas aprender cómo funciona el proceso electoral de forma práctica y sencilla. A través de esta experiencia, los participantes pueden conocer los pasos que se siguen al momento de emitir su voto, desde recibir la papeleta hasta depositarla en la urna.</p>
+                            <p>Durante la simulación se enseñan aspectos importantes como marcar correctamente la opción elegida dentro del recuadro correspondiente, revisar bien la papeleta antes de entregarla y mantener la calma durante el proceso.</p>
+                            <p>También se promueve la importancia de votar sin presión externa, respetando la decisión personal de cada ciudadano. Estas prácticas ayudan a que las personas se sientan más seguras y preparadas cuando participen en una votación real.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="info-grid">
-                    <div class="info-card purple">
-                        <h3>🎓 Capacitaciones</h3>
+                <!-- Encuestas sobre participación juvenil -->
+                <div class="activity-section">
+                    <div class="activity-card reverse">
+                        <div class="activity-image">
+                            <img src="imagenes/encuestas.jpg" alt="Encuestas sobre participación juvenil">
+                        </div>
+                        <div class="activity-info">
+                            <h3>Encuestas sobre la participación juvenil</h3>
+                            <p>Las encuestas permiten conocer qué tan informados y preparados están los jóvenes para participar en procesos democráticos como las elecciones. A través de estas consultas se puede analizar si los jóvenes investigan a los candidatos, conocen sus propuestas o si toman decisiones basadas en otros factores menos informados.</p>
+                            <p>Este tipo de estudios también busca entender cómo perciben los jóvenes la política y qué tan interesados están en participar activamente en la toma de decisiones del país.</p>
+                            <p>Los resultados ayudan a identificar la necesidad de fortalecer la educación cívica, promover el pensamiento crítico y motivar a los jóvenes a votar de manera responsable, informada y consciente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: TU VOTO, TU VOZ -->
+        <div id="tuvoto" class="tab-content">
+            <div class="content-wrapper">
+                <h2 class="page-title">Tu Voto, Tu Voz</h2>
+                
+                <div class="project-hero">
+                    <img src="imagenes/voto.jpg" alt="Tu Voto Tu Voz">
+                    <div class="project-hero-overlay">
+                        <h3>¿En qué consiste el proyecto?</h3>
+                    </div>
+                </div>
+            
+                <div class="project-card">
+                    <h3>¡Participa en la democracia!</h3>
+                    <p>"Tu Voto, Tu Voz" es un proyecto de educación cívica que busca informar detalladamente sobre los candidatos a las elecciones subnacionales en el municipio de La Paz, mostrando sus planes de gobierno y principales propuestas.</p>
+                    <p>El proyecto está gestionando visitas a Unidades Educativas, cada una con una población de más de 600 estudiantes, donde los jóvenes de 6to de secundaria votarán por primera vez, con el fin de brindar información necesaria para que cumplan con el deber ciudadano de forma informada.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎓</div>
+                        <h4>Capacitaciones</h4>
                         <p>Acciones de movilización con colegios para realizar encuestas-diagnóstico sobre las propuestas de cada partido político.</p>
                     </div>
-                    <div class="info-card orange">
-                        <h3>🗳️ Simulacros de Votación</h3>
+                    <div class="feature-card">
+                        <div class="feature-icon">🗳️</div>
+                        <h4>Simulacros de Votación</h4>
                         <p>Conformación de equipos de apoyo para realizar simulacros de votación con papeletas de sufragio reales.</p>
                     </div>
-                    <div class="info-card blue">
-                        <h3>📱 Blog Informativo</h3>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h4>Blog Informativo</h4>
                         <p>Creación de una base de datos donde la ciudadanía pueda encontrar toda la información de los candidatos.</p>
                     </div>
-                    <div class="info-card green">
-                        <h3>🎬 Videos Informativos</h3>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎬</div>
+                        <h4>Videos Informativos</h4>
                         <p>Producción de vídeos para redes sociales explicando la importancia del voto informado y responsable.</p>
                     </div>
                 </div>
 
-                <!-- Imagen decorativa usando background -->
-                <div class="decorative-image">
-                    <img src="imagenes/backgroudccdb.jpeg" alt="Capacitación">
-                </div>
-            </div>
+                <div class="objectives-section">
+                    <h3>Objetivos y Resultados Esperados</h3>
+                    
+                    <div class="objective-list">
+                        <div class="objective-item">
+                            <div class="objective-number">01</div>
+                            <div class="objective-content">
+                                <h4>Visitar Unidades Educativas</h4>
+                                <p>Realización de encuestas-diagnóstico que permitirán cercanía, atención e interés por el proceso electoral y la responsabilidad del voto.</p>
+                            </div>
+                        </div>
 
-            <div class="objectives-section">
-                <h3>🎯 Objetivos y Resultados Esperados</h3>
-                
-                <div class="objective-item">
-                    <div class="objective-icon">1</div>
-                    <div>
-                        <h4>Visitar Unidades Educativas</h4>
-                        <p>Realización de encuestas-diagnóstico que permitirán cercanía, atención e interés por el proceso electoral y la responsabilidad del voto.</p>
+                        <div class="objective-item">
+                            <div class="objective-number">02</div>
+                            <div class="objective-content">
+                                <h4>Simulacro Vivencial de Votación</h4>
+                                <p>Los estudiantes podrán informarse de cada candidato y partido, conocer la papeleta y administrar la conciencia de voto.</p>
+                            </div>
+                        </div>
+
+                        <div class="objective-item">
+                            <div class="objective-number">03</div>
+                            <div class="objective-content">
+                                <h4>Blog Informativo</h4>
+                                <p>Creación de un blog abierto con toda la información electoral que responda a principios de información, cultura de paz y valores democráticos.</p>
+                            </div>
+                        </div>
+
+                        <div class="objective-item">
+                            <div class="objective-number">04</div>
+                            <div class="objective-content">
+                                <h4>Material Audiovisual</h4>
+                                <p>Producción de reels cortos con información verídica del proceso electoral, difundidos por redes sociales.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="objective-item">
-                    <div class="objective-icon">2</div>
-                    <div>
-                        <h4>Simulacro Vivencial de Votación</h4>
-                        <p>Los estudiantes podrán informarse de cada candidato y partido, conocer la papeleta y administrar la conciencia de voto.</p>
-                    </div>
-                </div>
-
-                <div class="objective-item">
-                    <div class="objective-icon">3</div>
-                    <div>
-                        <h4>Blog Informativo</h4>
-                        <p>Creación de un blog abierto con toda la información electoral que responda a principios de información, cultura de paz y valores democráticos.</p>
-                    </div>
-                </div>
-
-                <div class="objective-item">
-                    <div class="objective-icon">4</div>
-                    <div>
-                        <h4>Material Audiovisual</h4>
-                        <p>Producción de reels cortos con información verídica del proceso electoral, difundidos por redes sociales.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Imagen decorativa -->
-            <div class="decorative-image">
-                <img src="imagenes/ccdb1.jpg" alt="Equipo del proyecto">
             </div>
         </div>
 
-        <!-- TAB 2: CANDIDATOS -->
+        <!-- TAB 3: CANDIDATOS -->
         <div id="candidatos" class="tab-content">
-            <h2 class="section-title">Candidatos a Alcaldía de La Paz</h2>
-            
-            <div class="candidates-grid">
-                <div class="candidate-card">
-                    <img src="imagenes/1.jpg" alt="Miguel Antonio Roca Sánchez" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">1</span>
-                        <h4 class="candidate-name">Miguel Antonio Roca Sánchez</h4>
-                        <p class="candidate-party">ASLP</p>
+            <div class="content-wrapper">
+                <h2 class="page-title">Candidatos a Alcaldía de La Paz</h2>
+                <p class="page-subtitle">Haz clic en cada candidato para conocer su plan de gobierno</p>
+                
+                <div class="candidates-grid">
+                    <!-- Candidato 1 -->
+                    <div class="candidate-card" onclick="openCandidateModal(1)">
+                        <div class="candidate-image">
+                            <img src="imagenes/1.jpg" alt="Miguel Roca">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">1</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Miguel Roca</h4>
+                            <p>Alianza Somos La Paz</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/2.jpg" alt="Jhonny Dario Plata Chalar" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">2</span>
-                        <h4 class="candidate-name">Jhonny Dario Plata Chalar</h4>
-                        <p class="candidate-party">Jallala</p>
+                    <!-- Candidato 2 -->
+                    <div class="candidate-card" onclick="openCandidateModal(2)">
+                        <div class="candidate-image">
+                            <img src="imagenes/2.jpg" alt="Jhonny Plata">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">2</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Jhonny Dario Plata Chalar</h4>
+                            <p>Jallalla LP</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/3.jpg" alt="Francisco Xavier Iturralde Torrico" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">3</span>
-                        <h4 class="candidate-name">Francisco Xavier Iturralde Torrico</h4>
-                        <p class="candidate-party">ASP</p>
+                    <!-- Candidato 3 -->
+                    <div class="candidate-card" onclick="openCandidateModal(3)">
+                        <div class="candidate-image">
+                            <img src="imagenes/3.jpg" alt="Francisco Iturralde">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">3</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Francisco Xavier Iturralde</h4>
+                            <p>Alianza Social Patriótica (ASP)</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/4.jpg" alt="Waldo Albarracín Sánchez" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">4</span>
-                        <h4 class="candidate-name">Waldo Albarracín Sánchez</h4>
-                        <p class="candidate-party">Venceremos</p>
+                    <!-- Candidato 4 -->
+                    <div class="candidate-card" onclick="openCandidateModal(4)">
+                        <div class="candidate-image">
+                            <img src="imagenes/4.jpg" alt="Waldo Albarracín">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">4</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Waldo Albarracín Sánchez</h4>
+                            <p>Venceremos (V)</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/5.jfif" alt="Luis Eduardo Siles Pérez" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">5</span>
-                        <h4 class="candidate-name">Luis Eduardo Siles Pérez</h4>
-                        <p class="candidate-party">Unión por el Cambio (UPC)</p>
+                    <!-- Candidato 5 -->
+                    <div class="candidate-card" onclick="openCandidateModal(5)">
+                        <div class="candidate-image">
+                            <img src="imagenes/5.jfif" alt="Luis Suarez">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">5</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Luis Nor Suarez Lima</h4>
+                            <p>Partido Demócrata Cristiano (PDC)</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/6.jpg" alt="Carlos Eduardo Palenque Monroy" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">6</span>
-                        <h4 class="candidate-name">Carlos Eduardo Palenque Monroy</h4>
-                        <p class="candidate-party">LIBRE</p>
+                    <!-- Candidato 6 -->
+                    <div class="candidate-card" onclick="openCandidateModal(6)">
+                        <div class="candidate-image">
+                            <img src="imagenes/6.jpg" alt="Carlos Palenque">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">6</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Carlos Eduardo Palenque Monroy</h4>
+                            <p>Libertad y República (LIBRE)</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/7.png" alt="Felipe Fernández Cano" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">7</span>
-                        <h4 class="candidate-name">Felipe Fernández Cano</h4>
-                        <p class="candidate-party">A-UPP</p>
+                    <!-- Candidato 7 -->
+                    <div class="candidate-card" onclick="openCandidateModal(7)">
+                        <div class="candidate-image">
+                            <img src="imagenes/7.png" alt="Felipe Fernandez">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">7</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Felipe Fernández Cano</h4>
+                            <p>A-UPP</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/8.jpg" alt="César Luis Dockweiler Suárez" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">8</span>
-                        <h4 class="candidate-name">César Luis Dockweiler Suárez</h4>
-                        <p class="candidate-party">Innovación Humana (IH)</p>
+                    <!-- Candidato 8 -->
+                    <div class="candidate-card" onclick="openCandidateModal(8)">
+                        <div class="candidate-image">
+                            <img src="imagenes/8.jpg" alt="Cesar Dockweiler">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">8</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>César Luís Dockweiler Suárez</h4>
+                            <p>Agrupación Innovación Humana</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/9.png" alt="Fernando Henrry Valencia Aguilera" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">9</span>
-                        <h4 class="candidate-name">Fernando Henrry Valencia Aguilera</h4>
-                        <p class="candidate-party">VIDA</p>
+                    <!-- Candidato 9 -->
+                    <div class="candidate-card" onclick="openCandidateModal(9)">
+                        <div class="candidate-image">
+                            <img src="imagenes/9.png" alt="Fernando Valencia">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">9</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Fernando Henrry Valencia Aguilera</h4>
+                            <p>VIDA</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/10.png" alt="Raúl Daza Quiroga" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">10</span>
-                        <h4 class="candidate-name">Raúl Daza Quiroga</h4>
-                        <p class="candidate-party">Frente Revolucionario de Izquierda (FRI)</p>
+                    <!-- Candidato 10 -->
+                    <div class="candidate-card" onclick="openCandidateModal(10)">
+                        <div class="candidate-image">
+                            <img src="imagenes/10.png" alt="Raul Daza">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">10</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Raul Daza Quiroga</h4>
+                            <p>Frente Revolucionario de Izquierda (FRI)</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/11.jpg" alt="Mario Silva Coya" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">11</span>
-                        <h4 class="candidate-name">Mario Silva Coya</h4>
-                        <p class="candidate-party">Partido Demócrata Cristiano (PDC)</p>
+                    <!-- Candidato 11 -->
+                    <div class="candidate-card" onclick="openCandidateModal(11)">
+                        <div class="candidate-image">
+                            <img src="imagenes/11.jpg" alt="Mario Silva">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">11</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Mario Silva Coya</h4>
+                            <p>Partido Demócrata Cristiano (PDC)</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/12.jpeg" alt="Jorge Dulón Fernández" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">12</span>
-                        <h4 class="candidate-name">Jorge Dulón Fernández</h4>
-                        <p class="candidate-party">Movimiento Tercer Sistema (MTS)</p>
+                    <!-- Candidato 12 -->
+                    <div class="candidate-card" onclick="openCandidateModal(12)">
+                        <div class="candidate-image">
+                            <img src="imagenes/12.jpeg" alt="Jorge Dulon">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">12</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Jorge Dulón Fernández</h4>
+                            <p>Movimiento Tercer Sistema (MTS)</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/13.png" alt="Hernán Rodrigo Rivera Nava" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">13</span>
-                        <h4 class="candidate-name">Hernán Rodrigo Rivera Nava</h4>
-                        <p class="candidate-party">Nueva Generación Patriótica (NGP)</p>
+                    <!-- Candidato 13 -->
+                    <div class="candidate-card" onclick="openCandidateModal(13)">
+                        <div class="candidate-image">
+                            <img src="imagenes/13.png" alt="Hernan Rivera">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">13</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Hernán Rodrigo Rivera Nava</h4>
+                            <p>Nueva Generación Patriótica (NGP)</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/14.jpg" alt="Oscar Manuel Sogliano Helguero" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">14</span>
-                        <h4 class="candidate-name">Oscar Manuel Sogliano Helguero</h4>
-                        <p class="candidate-party">Autonomía para Bolivia Súmate (APB-Súmate)</p>
+                    <!-- Candidato 14 -->
+                    <div class="candidate-card" onclick="openCandidateModal(14)">
+                        <div class="candidate-image">
+                            <img src="imagenes/14.jpg" alt="Oscar Sogliano">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">14</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Óscar Manuel Sogliano Helguero</h4>
+                            <p>Autonomía para Bolivia Súmate</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/15.png" alt="Carlos Nemo Rivero Auza" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">15</span>
-                        <h4 class="candidate-name">Carlos Nemo Rivero Auza</h4>
-                        <p class="candidate-party">Alianza Patria La Paz</p>
+                    <!-- Candidato 15 -->
+                    <div class="candidate-card" onclick="openCandidateModal(15)">
+                        <div class="candidate-image">
+                            <img src="imagenes/15.png" alt="Carlos Nemo">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">15</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Carlos Nemo Rivero Auza</h4>
+                            <p>Alianza Patria La Paz</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/16.png" alt="Hernán Iván Arias Durán" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">16</span>
-                        <h4 class="candidate-name">Hernán Iván Arias Durán</h4>
-                        <p class="candidate-party">Suma por el Bien Común (SPBC)</p>
+                    <!-- Candidato 16 -->
+                    <div class="candidate-card" onclick="openCandidateModal(16)">
+                        <div class="candidate-image">
+                            <img src="imagenes/16.png" alt="Ivan Arias">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">16</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Iván Arias Durán</h4>
+                            <p>Suma por el Bien Común</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/17.png" alt="Ricardo Cuevas" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">17</span>
-                        <h4 class="candidate-name">Ricardo Cuevas</h4>
-                        <p class="candidate-party">Movimiento por la Soberanía (MPS)</p>
+                    <!-- Candidato 17 -->
+                    <div class="candidate-card" onclick="openCandidateModal(17)">
+                        <div class="candidate-image">
+                            <img src="imagenes/17.png" alt="Ricardo Cuevas">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">17</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Ricardo Eloy Cuevas Vera</h4>
+                            <p>Movimiento por la Soberanía (MPS)</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="candidate-card">
-                    <img src="imagenes/18.png" alt="Roxana Pérez del Castillo" class="candidate-photo">
-                    <div class="candidate-info">
-                        <span class="candidate-number">18</span>
-                        <h4 class="candidate-name">Roxana Pérez del Castillo</h4>
-                        <p class="candidate-party">Alianza Recuperemos La Paz</p>
+                    <!-- Candidato 18 -->
+                    <div class="candidate-card" onclick="openCandidateModal(18)">
+                        <div class="candidate-image">
+                            <img src="imagenes/18.png" alt="Roxana Perez">
+                            <div class="candidate-overlay">
+                                <span class="candidate-number">18</span>
+                            </div>
+                        </div>
+                        <div class="candidate-info">
+                            <h4>Roxana Pérez del Castillo</h4>
+                            <p>Recuperemos La Paz</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- TAB 3: CENTRO CULTURAL DON BOSCO -->
-        <div id="ccdb" class="tab-content">
-            <h2 class="section-title">Centro Cultural Don Bosco</h2>
-
-            <!-- Logo del CCDB -->
-            <div class="ccdb-logo-container">
-                <img src="imagenes/logoccdb.png" alt="Logo Centro Cultural Don Bosco" class="ccdb-logo">
-            </div>
-
-            <div class="ccdb-hero">
-                <h3>🏛️ Institución Cultural de Derecho Privado sin Fines de Lucro</h3>
-                <p style="font-size: 1.3rem; margin-top: 20px;">Más de 17 años de compromiso con la juventud Boliviana</p>
-            </div>
-
-            <div class="ccdb-section">
-                <h4>🎨 Nuestra Misión</h4>
-                <p>El Centro Cultural Don Bosco (CCDB) es una Institución Cultural de Derecho Privado sin fines de lucro, cuyo principal objetivo responde a: <strong>incentivar a los jóvenes a descubrir sus talentos y habilidades</strong> en las distintas disciplinas artísticas y profesionales.</p>
-                <p>Ofrece a la sociedad distintos servicios desde el voluntariado activo, cuyo aporte permite descubrir nuevas miradas de la realidad, siendo aspectos centrales de nuestra participación activa hacia el bien común.</p>
+        <!-- TAB 4: ALIADOS -->
+        <div id="aliados" class="tab-content">
+            <div class="content-wrapper">
+                <h2 class="page-title">Nuestros Aliados</h2>
                 
-                <!-- Galería de imágenes del CCDB -->
-                <div class="ccdb-gallery">
-                    <div class="ccdb-gallery-item">
-                        <img src="imagenes/ccdb1.jpg" alt="CCDB 1">
-                    </div>
-                    <div class="ccdb-gallery-item">
-                        <img src="imagenes/ccdb2.jpg" alt="CCDB 2">
-                    </div>
-                    <div class="ccdb-gallery-item">
-                        <img src="imagenes/ccdb3.jpg" alt="CCDB 3">
-                    </div>
-                    <div class="ccdb-gallery-item">
-                        <img src="imagenes/ccdb4.jpeg" alt="CCDB 4">
-                    </div>
-                    <div class="ccdb-gallery-item">
-                        <img src="imagenes/ccdb5.jpeg" alt="CCDB 5">
-                    </div>
-                </div>
-            </div>
-
-            <div class="ccdb-section">
-                <h4>📚 Líneas de Trabajo</h4>
-                <div class="values-grid">
-                    <div class="value-item purple">
-                        <h5>🎭 Educación Artística</h5>
-                        <p>Formación en artes escénicas, música, pintura y más</p>
-                    </div>
-                    <div class="value-item blue">
-                        <h5>🌍 Extensión</h5>
-                        <p>Proyectos comunitarios y outreach social</p>
-                    </div>
-                    <div class="value-item green">
-                        <h5>🎪 Servicios Culturales</h5>
-                        <p>Eventos, conciertos y actividades abiertas</p>
-                    </div>
-                    <div class="value-item orange">
-                        <h5>📖 Formación Multidisciplinaria</h5>
-                        <p>Programas educativos integrales</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ccdb-section">
-                <h4>🙏 La Fórmula de Don Bosco</h4>
-                <p>El CCDB vive la espiritualidad de San Juan Bosco, aplicando los pilares fundamentales:</p>
-                
-                <div class="formula-grid" style="margin-top: 30px;">
-                    <div class="formula-item">
-                        <span class="formula-icon">🏠</span>
-                        <h5>Casa (Hogar)</h5>
-                        <p>El CCDB es el "segundo hogar" con un ambiente familiar y acogedor donde los jóvenes se sienten seguros, amados y cuidados.</p>
-                    </div>
-
-                    <div class="formula-item">
-                        <span class="formula-icon">📚</span>
-                        <h5>Escuela (Formación)</h5>
-                        <p>Educación integral más allá de lo académico, incluyendo valores, habilidades prácticas y formación humana-cristiana.</p>
-                    </div>
-
-                    <div class="formula-item">
-                        <span class="formula-icon">⛪</span>
-                        <h5>Parroquia (Fe)</h5>
-                        <p>Espacio de encuentro con Dios, catequesis, sacramentos y vida espiritual.</p>
-                    </div>
-
-                    <div class="formula-item">
-                        <span class="formula-icon">⚽</span>
-                        <h5>Patio (Juego y Convivencia)</h5>
-                        <p>Lugar de alegría, deporte, amistad y creatividad.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Equipo del Centro Cultural -->
-                <h3 style="text-align: center; color: #1a1a2e; font-size: 1.8rem; margin: 40px 0 30px;">🎭 Centro Cultural Don Bosco</h3>
-                
-                <div class="team-grid">
-                    <div class="team-ccdb-card">
-                        <div class="team-photo-container">
-                            <img src="imagenes/ccdb4.jpeg" alt="Actividades CCDB" class="team-photo">
-                            <div class="team-photo-overlay"></div>
+                <!-- RedCom -->
+                <div class="ally-card">
+                    <div class="ally-header redcom">
+                        <div class="ally-logo">
+                            <img src="imagenes/redcom.jpg" alt="RedCom">
                         </div>
-                        <div class="team-info">
-                            <h4 class="team-name">Programa Educativo</h4>
-                            <p class="team-role">Formación Integral</p>
-                            <p class="team-description">Programas de educación artística y formación multidisciplinaria para jóvenes.</p>
+                        <div class="ally-title">
+                            <h3>RedCom – Red Nacional de Comunicadores Locales</h3>
                         </div>
                     </div>
-
-                    <div class="team-ccdb-card">
-                        <div class="team-photo-container">
-                            <img src="imagenes/ccdb5.jpeg" alt="Eventos CCDB" class="team-photo">
-                            <div class="team-photo-overlay"></div>
-                        </div>
-                        <div class="team-info">
-                            <h4 class="team-name">Eventos Culturales</h4>
-                            <p class="team-role">Actividades Abiertas</p>
-                            <p class="team-description">Organización de eventos culturales, conciertos y actividades abiertas a la comunidad.</p>
-                        </div>
-                    </div>
-
-                    <div class="team-ccdb-card">
-                        <div class="team-photo-container">
-                            <img src="imagenes/bibliotecaccdb.jpeg" alt="Biblioteca" class="team-photo">
-                            <div class="team-photo-overlay"></div>
-                        </div>
-                        <div class="team-info">
-                            <h4 class="team-name">Biblioteca y Recursos</h4>
-                            <p class="team-role">Información</p>
-                            <p class="team-description">Acervo bibliográfico y recursos para la educación y formación de los jóvenes.</p>
-                        </div>
-                    </div>
-
-                    <div class="team-ccdb-card">
-                        <div class="team-photo-container">
-                            <img src="imagenes/backgroudccdb.jpeg" alt="Voluntariado" class="team-photo">
-                            <div class="team-photo-overlay"></div>
-                        </div>
-                        <div class="team-info">
-                            <h4 class="team-name">Voluntariado</h4>
-                            <p class="team-role">Servicio Comunitario</p>
-                            <p class="team-description">Programa de voluntariado activo que incentiva el compromiso social.</p>
-                        </div>
+                    <div class="ally-body">
+                        <p>La Red Nacional de Comunicadores y Comunicadoras Locales (RedCom) es la red de comunicación local más grande de Bolivia. Está conformada por más de 150 periodistas, comunicadores y creadores de contenido provenientes de comunidades y municipios de los nueve departamentos del país.</p>
+                        <p>Su trabajo se centra en fortalecer las capacidades de los comunicadores mediante espacios de intercambio de experiencias, buenas prácticas y herramientas digitales que permitan mejorar la comunicación comunitaria.</p>
+                        <p>Además, RedCom organiza encuentros nacionales donde se debaten temas relacionados con la democracia, los desafíos municipales y el impacto de las plataformas digitales en la información.</p>
                     </div>
                 </div>
 
-            <div class="ccdb-section">
-                <h4>🏆 Reconocimientos</h4>
-                <ul class="awards-list">
-                    <li><strong>Premio Nacional al Voluntariado "Yanapiri"</strong> - Otorgado por la ONU Voluntarios, PNUD y Ministerio de Justicia</li>
-                    <li><strong>Institución Destacada al Voluntariado</strong> - Otorgado por la Asamblea Legislativa Plurinacional de Bolivia</li>
-                    <li><strong>Premio ConCausa2030</strong> (representando a Bolivia) - Fundación Caserta, América Solidaria, UNICEF</li>
-                    <li>Reconocimientos del Ministerio de Turismo Sostenible, Culturas, Folklore y Gastronomía</li>
-                    <li>Reconocimientos de la Gobernación de La Paz</li>
-                    <li>Reconocimientos del Municipio de La Paz y SMCT</li>
-                    <li>Reconocimientos del Concejo Municipal de La Paz</li>
-                    <li>Reconocimientos de Fe y Alegría, Departamental La Paz</li>
-                </ul>
-            </div>
-
-            <!-- Imagen decorativa final -->
-            <div class="decorative-image">
-                <img src="imagenes/bibliotecaccdb.jpeg" alt="Actividades CCDB">
-            </div>
-        </div>
-
-        <!-- TAB 4: SOLIDARSUIZA -->
-        <div id="solidar" class="tab-content">
-            <h2 class="section-title">SolidarSuiza Bolivia</h2>
-
-            <div class="solidar-header">
-                <h3>🤝 SolidarSuiza Bolivia</h3>
-                <p style="font-size: 1.3rem; margin-top: 15px;">✨ Patrocinador del Proyecto "Tu Voto, Tu Voz" ✨</p>
-            </div>
-
-            <div class="solidar-content">
-                <div class="solidar-card">
-                    <h4>🌍 ¿Quiénes Somos?</h4>
-                    <p>SolidarSuiza es una organización de cooperación internacional que trabaja en Bolivia para promover el desarrollo sostenible y la justicia social. Con presencia en diversos países, unsere misión es apoyar a comunidades vulnerables a través de proyectos de capacitación, educación y fortalecimiento institucional.</p>
+                <!-- Solidar Suisse -->
+                <div class="ally-card">
+                    <div class="ally-header solidar">
+                        <div class="ally-logo white-bg">
+                            <img src="imagenes/logo-solidar-red.png" alt="Solidar Suisse">
+                        </div>
+                        <div class="ally-title">
+                            <h3>Solidar Suisse Bolivia</h3>
+                        </div>
+                    </div>
+                    <div class="ally-body">
+                        <p>Solidar Suisse Bolivia es una organización internacional de cooperación que trabaja en el país desde hace más de 30 años. Su misión es contribuir a mejorar las condiciones de vida de trabajadores precarios y jóvenes, promoviendo la justicia social y el desarrollo sostenible.</p>
+                        <p>Entre sus principales áreas de trabajo se encuentra la promoción del trabajo digno y el acceso a oportunidades laborales para jóvenes, mediante capacitaciones, pasantías y apoyo a emprendimientos.</p>
+                        <p>También impulsa proyectos para prevenir la violencia de género, fortalecer la participación democrática y fomentar la igualdad de oportunidades.</p>
+                    </div>
                 </div>
 
-                <div class="solidar-card">
-                    <h4>🎯 Nuestra Misión</h4>
-                    <p>Trabajamos para reducir la pobreza y promover la inclusión social mediante programas de formación profesional, apoyo a emprendimientos locales, y proyectos de participación ciudadana. Creemos en el poder transformador de la educación y el conocimiento.</p>
+                <!-- Centro Cultural Don Bosco -->
+                <div class="ally-card">
+                    <div class="ally-header ccdb">
+                        <div class="ally-logo">
+                            <img src="imagenes/ccdb1.jpg" alt="Centro Cultural Don Bosco">
+                        </div>
+                        <div class="ally-title">
+                            <h3>Centro Cultural Don Bosco</h3>
+                        </div>
+                    </div>
+                    <div class="ally-body">
+                        <p>El Centro Cultural Don Bosco (CCDB) es una institución cultural dedicada a promover el sin fines de lucro jóvenes. Su principal desarrollo integral de los objetivo es incentivar a las nuevas generaciones a descubrir y fortalecer sus talentos en distintas disciplinas artísticas, culturales y profesionales.</p>
+                        <p>El centro ofrece programas de educación artística como teatro, música, pintura y otras expresiones creativas, además de proyectos comunitarios, eventos culturales y actividades abiertas a la sociedad.</p>
+                        <p>Inspirado en la espiritualidad de San Juan Bosco, el centro busca ser un espacio donde los jóvenes encuentren un segundo hogar, un lugar seguro para aprender, compartir, desarrollar su creatividad y crecer tanto personal como profesionalmente.</p>
+                    </div>
                 </div>
 
-                <div class="solidar-card">
-                    <h4>📋 Áreas de Trabajo</h4>
-                    <p>Nuestras líneas de acción incluyen:</p>
-                    <ul>
-                        <li>Desarrollo económico local y emprendimiento</li>
-                        <li>Educación y formación técnica</li>
-                        <li>Participación ciudadana y gobernanza</li>
-                        <li>Protección de derechos</li>
-                        <li>Gestión ambiental</li>
-                    </ul>
+                <!-- Don Bosco TV -->
+                <div class="ally-card">
+                    <div class="ally-header dbtv">
+                        <div class="ally-logo">
+                            <img src="imagenes/dbtv.jpg" alt="Don Bosco TV">
+                        </div>
+                        <div class="ally-title">
+                            <h3>Don Bosco TV</h3>
+                        </div>
+                    </div>
+                    <div class="ally-body">
+                        <p>Don Bosco TV es un canal de transmisión dedicado a difundir contenidos educativos, culturales y sociales. Su objetivo es brindar un espacio de comunicación que permita compartir actividades, proyectos y eventos relacionados con la comunidad del Centro Cultural Don Bosco y otras iniciativas juveniles.</p>
+                        <p>A través de transmisiones, programas y producciones audiovisuales, el canal busca informar, educar y generar espacios de participación para jóvenes, voluntarios y organizaciones que trabajan por el desarrollo social.</p>
+                        <p>Don Bosco TV también funciona como una plataforma que impulsa la creatividad, la comunicación comunitaria y la difusión de mensajes positivos.</p>
+                    </div>
                 </div>
 
-                <div class="solidar-card">
-                    <h4>🤝 Alianza con el Proyecto</h4>
-                    <p>SolidarSuiza es el patrocinador principal del proyecto "Tu Voto, Tu Voz", creemos firmemente en la importancia de la educación cívica y la participación informada de los jóvenes en los procesos democráticos. Este proyecto representa nuestro compromiso con el fortalecimiento de la democracia en Bolivia.</p>
+                <!-- La Mega Radio -->
+                <div class="ally-card">
+                    <div class="ally-header megaradio">
+                        <div class="ally-logo">
+                            <img src="imagenes/megaradio.jpg" alt="La Mega Radio">
+                        </div>
+                        <div class="ally-title">
+                            <h3>La Mega Radio</h3>
+                        </div>
+                    </div>
+                    <div class="ally-body">
+                        <p>La Mega Radio es un estudio de radio dedicado a la producción y transmisión de contenidos informativos, culturales y de entretenimiento. Este espacio funciona como un medio de comunicación que permite compartir noticias, programas educativos, entrevistas y actividades relacionadas con la comunidad.</p>
+                        <p>Además de transmitir contenido radial, La Mega Radio también sirve como un espacio de formación para jóvenes interesados en la comunicación, permitiéndoles aprender sobre locución, producción de programas, manejo de equipos de audio y creación de contenido radiofónico.</p>
+                        <p>De esta manera, la radio se convierte en una plataforma que fomenta la participación juvenil, la expresión de ideas y el fortalecimiento de la comunicación local.</p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Imagen decorativa -->
-            <div class="decorative-image">
-                <img src="imagenes/backgroudccdb.jpeg" alt="SolidarSuiza">
             </div>
         </div>
 
         <!-- TAB 5: NUESTRO EQUIPO -->
         <div id="equipo" class="tab-content">
-            <h2 class="section-title">Nuestro Equipo</h2>
-
-            <div class="team-section">
-                <!-- Introducción con fondo -->
-                <div class="team-intro">
-                    <h3>💪 Juntos por la Democracia</h3>
-                    <p>Un equipo comprometido con la educación cívica y el futuro de Bolivia. ¡Conoce a las personas que hacen posible este proyecto!</p>
-                </div>
-
-                <!-- Equipo Principal -->
-                <h3 style="text-align: center; color: #1a1a2e; font-size: 1.8rem; margin: 40px 0 30px;">👥 Equipo Principal</h3>
+            <div class="content-wrapper">
+                <h2 class="page-title">Nuestro Equipo</h2>
                 
-                <div class="team-grid">
-                    <div class="team-card">
-                        <div class="team-photo-container">
-                            <img src="imagenes/profile1.jpg" alt="Galile Alison Llusco Asistiri" class="team-photo">
-                            <div class="team-photo-overlay"></div>
-                        </div>
-                        <div class="team-info">
-                            <h4 class="team-name">Galile Alison Llusco Asistiri</h4>
-                            <p class="team-role">Desarrollador Web</p>
-                            <p class="team-description">Estudiante de Ingeniería de Sistemas. Apoyó en la creación y desarrollo de la página web del proyecto "Tu Voto, Tu Voz".</p>
-                        </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="imagenes/equipo.jfif" alt="Nuestro Equipo">
                     </div>
-
-                    <!-- Usando imágenes del CCDB para más miembros del equipo -->
-                    <div class="team-card">
-                        <div class="team-photo-container">
-                            <img src="imagenes/ccdb2.jpg" alt="Voluntario CCDB" class="team-photo">
-                            <div class="team-photo-overlay"></div>
-                        </div>
-                        <div class="team-info">
-                            <h4 class="team-name">Equipo CCDB</h4>
-                            <p class="team-role">Coordinación General</p>
-                            <p class="team-description">Coordinadores y voluntarios del Centro Cultural Don Bosco que hacen posible la ejecución del proyecto.</p>
-                        </div>
-                    </div>
-
-                    <div class="team-card">
-                        <div class="team-photo-container">
-                            <img src="imagenes/ccdb3.jpg" alt="Equipo Educativo" class="team-photo">
-                            <div class="team-photo-overlay"></div>
-                        </div>
-                        <div class="team-info">
-                            <h4 class="team-name">Equipo Educativo</h4>
-                            <p class="team-role">Facilitadores</p>
-                            <p class="team-description">Profesionales dedicados a las capacitaciones y simulacros de votación en las Unidades Educativas.</p>
-                        </div>
-                    </div>
-
-                    <div class="team-card">
-                        <div class="team-photo-container">
-                            <img src="imagenes/ccdb1.jpg" alt="Voluntarios" class="team-photo">
-                            <div class="team-photo-overlay"></div>
-                        </div>
-                        <div class="team-info">
-                            <h4 class="team-name">Voluntarios CCDB</h4>
-                            <p class="team-role">Voluntariado Activo</p>
-                            <p class="team-description">Jóvenes voluntarios comprometidos con la misión del Centro Cultural Don Bosco y el proyecto.</p>
-                        </div>
+                    <div class="team-info">
+                        <h3>Equipo de Trabajo</h3>
+                        <ul class="team-list">
+                            <li>
+                                <span class="team-member-name">Galile Alison Llusco Asistiri</span>
+                                <span class="team-member-role">Estudiante de Ingeniería de Sistemas</span>
+                                <span class="team-member-desc">Apoyó en la creación y desarrollo del blog</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-                
-
-                
             </div>
         </div>
+
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p class="highlight">© 2026 Tu Voto, Tu Voz - Proyecto ComunicracIA</p>
-        <p>🤝 La democracia vota por vos</p>
-        <p class="credits">Desarrollado con el apoyo del Centro Cultural Don Bosco y SolidarSuiza</p>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #777;">🎭 CCDB - Más de 17 años con la juventud Boliviana</p>
+        <div class="footer-content">
+            <p class="footer-brand">© 2026 Tu Voto, Tu Voz - Proyecto ComunicracIA</p>
+            <p class="footer-tagline">La democracia vota por vos</p>
+            <p class="footer-credits">Desarrollado con el apoyo del Centro Cultural Don Bosco y SolidarSuiza</p>
+        </div>
     </footer>
 
+    <!-- Candidate Modal -->
+    <div id="candidateModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeCandidateModal()">&times;</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
     <script>
+        // Candidate data
+        const candidatesData = {
+            1: {
+                name: "Miguel Roca",
+                party: "Alianza Somos La Paz",
+                image: "imagenes/1.jpg",
+                profile: "Político y economista con trayectoria en el sector público y privado. Fue diputado en la Asamblea Legislativa Plurinacional durante el periodo 2020-2025 por la alianza Comunidad Ciudadana.",
+                formation: "Universidad de Kansas (Estados Unidos) y MBA en la Universidad Católica Boliviana.",
+                proposals: [
+                    "Administración municipal más eficiente y transparente",
+                    "Mejoramiento de la calidad de los servicios públicos",
+                    "Mejoramiento de las calles y planificación urbana",
+                    "Políticas para enfrentar riesgos por lluvias, deslizamientos y desastres naturales",
+                    "Mejor manejo del agua y planificación urbana en zonas vulnerables"
+                ]
+            },
+            2: {
+                name: "Jhonny Dario Plata Chalar",
+                party: "Jallalla LP",
+                image: "imagenes/2.jpg",
+                profile: "Conocido públicamente como Jhonny Plata. Es comunicador social y político boliviano, candidato a la Alcaldía de La Paz por Jallalla, conocido por su trabajo en radio y televisión.",
+                proposals: [
+                    "Apoyo a emprendedores con la creación de un Banco Municipal de Fomento para impulsar pequeños y medianos negocios",
+                    "Defensa de los derechos de los animales",
+                    "Protección del patrimonio cultural",
+                    "Atención a problemas urbanos históricos"
+                ]
+            },
+            3: {
+                name: "Francisco Xavier Iturralde",
+                party: "Alianza Social Patriótica (ASP)",
+                image: "imagenes/3.jpg",
+                profile: "46 años. Es empresario y emprendedor con experiencia en comercio internacional.",
+                proposals: [
+                    "Apoyar a emprendedores y pequeños negocios",
+                    "Reducir la burocracia municipal",
+                    "Cambiar la forma en que se administra el presupuesto",
+                    "Gestión eficiente en el municipio con enfoque técnico y orientado a resultados"
+                ]
+            },
+            4: {
+                name: "Waldo Albarracín Sánchez",
+                party: "Venceremos (V)",
+                image: "imagenes/4.jpg",
+                profile: "Jurista, defensor de derechos humanos y académico con trayectoria en la sociedad civil. Fue presidente de la Asamblea Permanente de Derechos Humanos de Bolivia (APDHB), Defensor del Pueblo y rector de la UMSA.",
+                proposals: [
+                    "Ordenar la casa del municipio mediante reestructuración institucional profunda",
+                    "Aprobar una nueva Carta Orgánica Municipal",
+                    "Fortalecer la transparencia y lucha contra la corrupción",
+                    "Crear una Defensoría del Ciudadano",
+                    "Mejorar la movilidad con sistema de transporte metropolitano integrado",
+                    "Presupuesto para sectores vulnerables",
+                    "Políticas ambientales y gestión eficiente de residuos"
+                ]
+            },
+            5: {
+                name: "Luis Nor Suarez Lima",
+                party: "Partido Demócrata Cristiano (PDC)",
+                image: "imagenes/5.jfif",
+                profile: "Candidato a la Alcaldía del municipio de La Paz por el PDC. No cuenta con perfiles biográficos ampliamente difundidos en medios nacionales.",
+                proposals: [
+                    "9 puntos estratégicos desde salud hasta gestión pública transparente",
+                    "Articulación interinstitucional con los diferentes niveles de gobierno"
+                ]
+            },
+            6: {
+                name: "Carlos Eduardo Palenque Monroy",
+                party: "Libertad y República (LIBRE)",
+                image: "imagenes/6.jpg",
+                profile: "Conocido también como Cae Palenque. Es comunicador y político paceño, hijo del histórico líder político y comunicador Carlos Palenque Avilés (El Compadre), fundador del movimiento CONDEPA.",
+                proposals: [
+                    "Modernizar la ciudad y resolver problemas de transporte",
+                    "Infraestructura y administración municipal",
+                    "Implementar un tren urbano eléctrico como nuevo sistema de transporte",
+                    "Mejoramiento de las avenidas y calles de la ciudad"
+                ]
+            },
+            7: {
+                name: "Felipe Fernández Cano",
+                party: "A-UPP",
+                image: "imagenes/7.png",
+                profile: "Candidato por A-UPP.",
+                proposals: ["Información no disponible"]
+            },
+            8: {
+                name: "César Luís Dockweiler Suárez",
+                party: "Agrupación Innovación Humana",
+                image: "imagenes/8.jpg",
+                profile: "Político y gestor público. Nació en el departamento de La Paz y creció en el municipio de Sorata. Gerente de Mi Teleférico entre 2012-2019.",
+                formation: "Economía, MBA, Maestría en Planificación Estratégica, PhD en Gestión del Desarrollo y Políticas Públicas (UMSA).",
+                proposals: [
+                    "Plan La Paz 2050 - transformación de la ciudad con visión de largo plazo",
+                    "Modernización, seguridad y desarrollo económico",
+                    "Modernizar La Paz mediante tecnología, planificación urbana y desarrollo económico"
+                ]
+            },
+            9: {
+                name: "Fernando Henrry Valencia Aguilera",
+                party: "VIDA",
+                image: "imagenes/9.png",
+                profile: "Candidato por VIDA.",
+                proposals: ["Información no disponible"]
+            },
+            10: {
+                name: "Raul Daza Quiroga",
+                party: "Frente Revolucionario de Izquierda (FRI)",
+                image: "imagenes/10.png",
+                profile: "Es ingeniero civil y abogado, con experiencia en planificación urbana y presidente de la Sociedad de Ingenieros de Bolivia (La Paz).",
+                proposals: [
+                    "Programa 3-80 - ciudad inclusiva para personas de 3 a 80 años",
+                    "Mejor planificación urbana",
+                    "Infraestructura moderna y accesible",
+                    "Mejora de espacios públicos y servicios básicos",
+                    "Gestión municipal técnica y no política"
+                ]
+            },
+            11: {
+                name: "Mario Silva Coya",
+                party: "Partido Demócrata Cristiano (PDC)",
+                image: "imagenes/11.jpg",
+                profile: "Candidato por PDC.",
+                proposals: ["Información no disponible"]
+            },
+            12: {
+                name: "Jorge Dulón Fernández",
+                party: "Movimiento Tercer Sistema (MTS)",
+                image: "imagenes/12.jpeg",
+                profile: "Administrador público y cientista político. Formación en Gobierno y Gestión Pública (Universidad de Chile) y maestría en Gestión y Políticas Públicas (Universidad Católica Boliviana). Actual presidente del Concejo Municipal de La Paz.",
+                proposals: [
+                    "Recuperar la institucionalidad municipal",
+                    "Diseñar políticas serias de prevención de riesgos",
+                    "Reforzar la seguridad ciudadana",
+                    "Mejorar la convivencia en barrios y espacios públicos",
+                    "Orden urbano y transporte - integración del sistema de transporte eliminando el trameaje"
+                ]
+            },
+            13: {
+                name: "Hernán Rodrigo Rivera Nava",
+                party: "Nueva Generación Patriótica (NGP)",
+                image: "imagenes/13.png",
+                profile: "Administrador de empresas de 36 años. Incursiona por primera vez formalmente en la política municipal como candidato a alcalde de La Paz.",
+                proposals: [
+                    "Gestión que haga que la ciudadanía vuelva a sentirse orgullosa de ser de La Paz",
+                    "Mejorar la salud - mejor calidad para pacientes y condiciones para profesionales",
+                    "Creación de escuelas piloto con enfoque en idiomas y tecnología",
+                    "Programa seguridad 24/7 en todos los macrodistritos"
+                ]
+            },
+            14: {
+                name: "Óscar Manuel Sogliano Helguero",
+                party: "Autonomía para Bolivia Súmate (APB-Súmate)",
+                image: "imagenes/14.jpg",
+                profile: "Politólogo titulado en la UMSA. Posgrados en Análisis, Resolución y Manejo de Conflictos y Estudios Políticos Aplicados. Fue Concejal municipal (2015-2020) y Subalcalde de la zona Sur de La Paz bajo Sol.bo.",
+                proposals: [
+                    "Ordenar el sistema de transporte urbano (PumaKatari y ChikiTitis eléctricos)",
+                    "Uso de referendos para temas complejos como límites territoriales",
+                    "Lucha contra loteamientos ilegales",
+                    "Promover diálogo, concertación y autoridad municipal"
+                ]
+            },
+            15: {
+                name: "Carlos Nemo Rivero Auza",
+                party: "Alianza Patria La Paz",
+                image: "imagenes/15.png",
+                profile: "Candidato por Alianza Patria La Paz.",
+                proposals: ["Información no disponible"]
+            },
+            16: {
+                name: "Iván Arias Durán",
+                party: "Suma por el Bien Común",
+                image: "imagenes/16.png",
+                profile: "Sociólogo, periodista y político boliviano nacido el 8 de agosto de 1958 en La Paz. Estudió en la UMSA. Fue Viceministro de Participación Popular (2001-2002), Ministro de Obras Públicas (2019-2020) y actualmente Alcalde de La Paz.",
+                proposals: [
+                    "Mejorar la movilidad y el transporte en la ciudad",
+                    "Fortalecer la seguridad ciudadana",
+                    "Impulsar el desarrollo económico y el turismo",
+                    "Ampliar programas sociales y espacios verdes",
+                    "Mejorar la calidad de vida de los habitantes"
+                ]
+            },
+            17: {
+                name: "Ricardo Eloy Cuevas Vera",
+                party: "Movimiento por la Soberanía (MPS)",
+                image: "imagenes/17.png",
+                profile: "Tiene 32 años. Estudios superiores en Derecho (UMSA). Cursos de entrenador de fútbol. Participó activamente en la Junta de Vecinos de Villa San Antonio Alto.",
+                proposals: [
+                    "Potenciar el turismo - convertir La Paz en destino turístico internacional",
+                    "Mejorar servicios básicos",
+                    "Trabajar en soluciones concretas para falencias de salud, educación y seguridad ciudadana"
+                ]
+            },
+            18: {
+                name: "Roxana Pérez del Castillo",
+                party: "Recuperemos La Paz",
+                image: "imagenes/18.png",
+                profile: "Abogada y política paceña con trayectoria en la administración pública y en la política nacional. Fue diputada en la Asamblea Legislative Plurinacional.",
+                proposals: [
+                    "Reorganizar la estructura administrativa municipal",
+                    "Mejorar la transparencia y optimizar el uso de recursos públicos",
+                    "Fortalecer la seguridad en barrios y zonas comerciales"
+                ]
+            }
+        };
+
         function showTab(tabId) {
-            // Hide all tab contents
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
 
-            // Remove active class from all nav buttons
-            const buttons = document.querySelectorAll('.nav-btn');
+            const buttons = document.querySelectorAll('.nav-link');
             buttons.forEach(btn => btn.classList.remove('active'));
 
-            // Show selected tab
             document.getElementById(tabId).classList.add('active');
+            event.target.closest('.nav-link').classList.add('active');
 
-            // Add active class to clicked button
-            event.target.classList.add('active');
-
-            // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        function openCandidateModal(id) {
+            const candidate = candidatesData[id];
+            const modal = document.getElementById('candidateModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            let proposalsHTML = candidate.proposals.map(p => `<li>${p}</li>`).join('');
+            
+            modalContent.innerHTML = `
+                <div class="modal-candidate-header">
+                    <img src="${candidate.image}" alt="${candidate.name}">
+                    <div class="modal-candidate-title">
+                        <span class="modal-number">${id}</span>
+                        <h3>${candidate.name}</h3>
+                        <p>${candidate.party}</p>
+                    </div>
+                </div>
+                <div class="modal-candidate-body">
+                    <div class="modal-section">
+                        <h4>Perfil</h4>
+                        <p>${candidate.profile}</p>
+                        ${candidate.formation ? `<p><strong>Formación:</strong> ${candidate.formation}</p>` : ''}
+                    </div>
+                    <div class="modal-section">
+                        <h4>Propuestas Principales</h4>
+                        <ul>${proposalsHTML}</ul>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCandidateModal() {
+            const modal = document.getElementById('candidateModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeModal(event) {
+            if (event.target.classList.contains('modal')) {
+                closeCandidateModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCandidateModal();
+            }
+        });
     </script>
 </body>
 </html>
+
