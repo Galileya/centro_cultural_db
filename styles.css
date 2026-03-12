@@ -1,3 +1,4 @@
+
 /* ============================================
    ESTILOS - Tu Voto Tu Voz 2026
    ============================================ */
@@ -747,7 +748,7 @@ body {
 }
 
 .team-image {
-    height: 350px;
+    height: 750px;
     overflow: hidden;
 }
 
@@ -955,4 +956,3 @@ body {
         font-size: 2rem;
     }
 }
-
